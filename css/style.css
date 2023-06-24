@@ -32,6 +32,7 @@
 .glass p{
   margin-bottom: 1.5rem;
   font-size: 24px;
+  color: rgb(255, 255, 255);
 }
 p.cursiva {
   font-style: italic;
@@ -137,22 +138,11 @@ border-radius: 50%;
   justify-content: center;
   margin-bottom: 20px;
 }  
-.button-home {
-  border: 1px solid #2e518b;
-  padding: 10px; 
-  background-color: #2e518b; 
-  color: #ffffff; 
-  text-decoration: none; 
-  text-transform: uppercase; 
-  font-family: 'Helvetica', sans-serif; 
-  border-radius: 50px; 
-}
 .center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 .mission-title {
   margin-bottom: 10px;
@@ -161,4 +151,50 @@ border-radius: 50%;
 .mission-list {
   margin-top: 0; 
   padding-left: 20px; 
+}
+.button-home {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #0a9cf0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.2s;
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button:hover {
+  color: #0a9cf0;
+  background-color: #FFFFFF;
+  box-shadow: 4px 5px 17px -4px #0aabf0;
 }
